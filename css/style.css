@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: font_new;
+}
+@font-face {
+  font-family: font_new;
+  src: url(../fonts/DidactGothic-Regular.ttf);
+}
+.header {
+  background-color: #6a6b65;
+  height: 120px;
+  display: flex;
+}
+
+.header .header_left {
+  width: 40%;
+  text-align: center;
+}
+
+.header .header_left a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.header .header_right {
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.header .header_right a {
+  text-decoration: none;
+  margin-right: 40px;
+  color: white;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  font-size: 20px;
+}
+
+.header .header_right a:hover {
+  color: #d68857;
+  cursor: pointer;
+}
+
+.header .header_right a:active {
+  color: #d68857;
+}
+
+.carousel {
+  height: 500px;
+  background-image: url("../img/carousel_3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro {
+  margin-top: 10px;
+  height: 650px;
+  display: flex;
+  padding: 10px;
+}
+
+.intro .intro_left {
+  width: 25%;
+  height: 100%;
+  background-color: #373630;
+}
+
+.intro .intro_left h1 {
+  padding: 20px;
+  background-color: #373630;
+
+  font-size: 30px;
+  text-align: center;
+  color: #e9e9e9;
+}
+
+.intro .intro_left ._item {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.intro .intro_left ._img {
+}
+.intro .intro_left img {
+  width: 100%;
+}
+
+.intro .intro_left .content {
+  padding: 20px;
+}
+
+.intro .intro_left .content h3 {
+  margin-bottom: 10px;
+}
+.intro .intro_left .content ._btn {
+  text-align: center;
+}
+.intro .intro_left .content button {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.intro .intro_right {
+  width: 75%;
+  height: 100%;
+}
+
+.intro .intro_right .intro_right_top {
+  height: 65%;
+  width: 100%;
+}
+
+.intro .intro_right .intro_right_top .list_item ._item {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.intro .intro_right .intro_right_top .list_item ._item .content {
+  background-color: #fafaf7;
+  height: 100%;
+}
+
+.intro .intro_right .intro_right_top .list_item ._item .content h1 {
+  padding: 20px;
+  background-color: #d5bd47;
+
+  font-size: 30px;
+  text-align: center;
+  color: #e9e9e9;
+}
+
+.intro .intro_right .intro_right_top .list_item ._item .content p {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.intro .intro_right .intro_right_top .list_item ._item .content ._btn {
+  text-align: center;
+}
+.intro .intro_right .intro_right_top .list_item ._item .content ._btn button {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #d5bd47;
+}
+
+.intro .intro_right .intro_right_bottom {
+  height: 35%;
+  width: 100%;
+}
+
+.intro .intro_right .intro_right_top .list_item {
+  display: flex;
+  height: 100%;
+}
+
+.intro .intro_right .intro_right_top ._item {
+  width: calc(100% / 3);
+}
+
+.intro .intro_right .intro_right_bottom {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.intro .intro_right .intro_right_bottom .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #fafaf7;
+}
+
+.intro .intro_right .intro_right_bottom .content .content_left {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.intro .intro_right .intro_right_bottom .content .content_left .title {
+}
+.intro .intro_right .intro_right_bottom .content .content_left h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.intro .intro_right .intro_right_bottom .content .content_left h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.intro .intro_right .intro_right_bottom .content .content_right {
+  width: 30%;
+  height: 100%;
+}
+
+.intro .intro_right .intro_right_bottom .content .content_right {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro .intro_right .intro_right_bottom .content .content_right ._btn1 {
+  margin-bottom: 10px;
+}
+
+.intro .intro_right .intro_right_bottom .content .content_right ._btn1 button {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #c17b4e;
+  font-size: 15px;
+}
+.intro .intro_right .intro_right_bottom .content .content_right ._btn2 button {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+  border-radius: 5px;
+  border: 0;
+  background-color: #b0a378;
+  font-size: 15px;
+}
+._best_idea {
+  padding: 20px;
+}
+._best_idea .content {
+  display: flex;
+  background-color: #fafaf7;
+}
+
+._best_idea .content .content_left {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+._best_idea .content .content_left .title {
+  width: 60%;
+  margin: auto;
+}
+._best_idea .content .content_left .title h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+._best_idea .content .content_left .title p {
+  font-size: 20px;
+}
+._best_idea .content .content_right {
+  width: 40%;
+}
+
+._best_idea .content .content_right img {
+  width: 100%;
+}
+
+._gallery {
+  padding: 20px;
+}
+
+._gallery h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+._gallery .list {
+  margin-top: 20px;
+  display: flex;
+}
+
+._gallery .list .item {
+  width: 25%;
+  padding-right: 20px;
+  height: 150px;
+  position: relative;
+}
+
+._gallery .list .item img {
+  width: 100%;
+  height: 100%;
+}
+
+._gallery .list .item .info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-right: 20px;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+._gallery .list .item .info .content {
+  width: 100%;
+  height: 100%;
+  background-color: #373630;
+  opacity: 50%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+ 
+}
+
+._gallery .list .item .info .content .title_1 a {
+  color: white;
+}
+
+._gallery .list .item:hover .info {
+    visibility: visible;
+}
+
+._advantage {
+    padding: 20px;
+}
+
+._advantage .content h1{
+    text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
