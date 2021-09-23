@@ -229,6 +229,7 @@
   border: 0;
   background-color: #c17b4e;
   font-size: 15px;
+  cursor: pointer;
 }
 .intro .intro_right .intro_right_bottom .content .content_right ._btn2 button {
   width: 200px;
@@ -239,6 +240,8 @@
   border: 0;
   background-color: #b0a378;
   font-size: 15px;
+  cursor: pointer;
+
 }
 ._best_idea {
   padding: 20px;
@@ -341,4 +344,99 @@
     text-align: center;
   font-size: 40px;
   margin-bottom: 20px;
+}
+
+._advantage .content .list {
+    display: flex;
+}
+
+._advantage .content .list ._advantage_left{
+    padding-top: 30px;
+    width: 50%;
+    display: flex;
+}
+
+._advantage .content .list ._advantage_left .item_1 {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+._advantage .content .list ._advantage_left .item_1 ._number{
+    width: 60px;
+    height: 75px;
+    background-color: #bba94c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+._advantage .content .list ._advantage_left .item_1 ._number h1{
+    padding-top: 17px;
+    color: white;
+   
+}
+
+._advantage .content .list ._advantage_left .item_2 {
+    width: 85%;
+}
+
+._advantage .content .list ._advantage_left .item_2 h3{
+    margin-bottom: 10px;
+}
+
+._advantage .content .list ._advantage_left .item_2 p{
+    margin-bottom: 10px;
+}
+
+._advantage .content .list ._advantage_left .item_2 button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #bba94c;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    
+}
+.footer .contain {
+    display: flex;
+    justify-content: space-around;
+    background-color:#fafaf7 ;
+    height: 100px
+}
+.footer .footer_left {
+    width: 50%;
+}
+.footer .footer_right {
+    width: 50%;
+}
+.footer .footer_left {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.footer .footer_left ._home{
+    font-size: 50px;
+    color:#8e847f;
+    margin-right: 20px;
+}
+.footer .footer_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .footer_right i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+.footer ._text {
+
 }
