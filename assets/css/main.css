@@ -16,7 +16,7 @@ html{
 }
 
 p {
-    color: #2b170a;
+    /* color: #2b170a; */
 }
 
 .logo{
@@ -78,12 +78,12 @@ p {
 #navigation-contact > li >a{
     line-height: 46px;
     padding: 20px 28px;
-    color: #2b170a;
+    /* color: #2b170a; */
 }
 
 #navigation-contact a{
     text-decoration: none;
-    color: #2b170a;
+   /*  color: #2b170a; */
 }
 
 #navigation-contact .icon_account{
@@ -117,7 +117,7 @@ p {
     display: none;
     position: absolute;
     background-color: #bba94c;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); */
     text-align: center;
     padding: 16px 0; 
     z-index: 1px; 
@@ -144,7 +144,7 @@ p {
 #content-contact .heading::after{
     content: "";
     height: 1.5px;
-    background-color: rgba(128, 128, 128, 0.4);
+/*     background-color: rgba(128, 128, 128, 0.4); */
     display: block;
     justify-content: center;
 }
@@ -239,7 +239,7 @@ p {
 .navbar::after{
     content: "";
     height: 1.5px;
-    background-color: rgba(128, 128, 128, 0.4);
+   /*  background-color: rgba(128, 128, 128, 0.4); */
     display: block;
     justify-content: center;
 }
@@ -268,7 +268,6 @@ p {
 
 /*Form*/
 #container{
-    background: url(../img/background-form5.jpg) no-repeat;
     background-position: center;
     backdrop-filter: brightness(0.4);
     background-position: 30%;
@@ -289,12 +288,13 @@ p {
 }
 
 .form{
-    background-color: rgb(255 255 255 / 7%);
+ /*    background-color: rgb(255 255 255 / 7%); */
     justify-content: center;
     margin-top: 120px;
     padding: 32px;
     position: flex;
     margin-bottom: 120px;
+    background-color: #93b3d8;
 }
 
 .body-form .icon-input{
@@ -311,7 +311,7 @@ p {
     letter-spacing: 8px;
     line-height: 1.5;
     font-family: none;
-    text-shadow: 2px 2px 4px #000;
+   /*  text-shadow: 2px 2px 4px #000; */
 }
 
 .body-form .input-form{
