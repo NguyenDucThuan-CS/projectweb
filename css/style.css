@@ -659,6 +659,8 @@
   margin-bottom: 20px;
 }
 
+/* DA SUA TU CHO NAY */
+
 .catalogue_title {
   padding: 20px;
 }
@@ -683,13 +685,18 @@
 .list_product ._contain hr {
   margin-bottom: 20px;
 }
-.list_product ._contain .list_item {
-}
+
 .list_product ._contain .list_item .item {
-  width: calc(100% / 3);
-  padding-right: 20px;
-  margin-bottom: 30px;
+  width: calc(100% / 4);
+  margin-bottom: 20px;
   float: left;
+  /* padding-right: 20px; */
+  transition: 0.5s;
+}
+
+.list_product ._contain .list_item .item:hover {
+  transform: translate(0, -4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .list_product ._contain .list_item .item .image img {
@@ -707,7 +714,7 @@
 }
 
 .detail_product {
-  padding: 20px;
+  padding: 10px;
   height: 500px;
 }
 
@@ -717,12 +724,35 @@
 }
 
 .detail_product ._contain .image {
-  width: 60%;
+  width: 47%;
   padding: 10px;
   height: 100%;
 }
 
 .detail_product ._contain .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.detail_product ._contain .slider {
+  width: 13%;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail_product ._contain .slider .sm-img-wrapper {
+  transition: 0.5s;
+}
+
+.detail_product ._contain .slider .sm-img-wrapper:hover {
+  transform: translate(0, -4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.detail_product ._contain .slider img {
   width: 100%;
   height: 100%;
 }
@@ -755,6 +785,8 @@
 .detail_product ._contain .content hr {
   margin-bottom: 10px;
 }
+
+/* DEN HET CHO NAY */
 
 /* ================================================================CHECKOUT PAGE================================================================ */
 
@@ -1430,3 +1462,45 @@ input:focus {
 }
 
 /* ================================================================//PAYMENT MODAL================================================================ */
+
+/* ================================================================FILTER BAR CATALOGUE - MOI DUOC THEM VAO================================================================ */
+.catalogue_title .select-wrapper .filter {
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 0 1em;
+  color: #000;
+  background-color: #eee;
+  background-image: none;
+  cursor: pointer;
+  font-family: font_new;
+  font-size: 20px;
+}
+.catalogue_title .select-wrapper .filter::-ms-expand {
+  display: none;
+}
+.catalogue_title .select-wrapper {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+  margin-left: 80px;
+}
+.catalogue_title .select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #6a6b65;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+.catalogue_title .select-wrapper:hover::after {
+  color: #f39c12;
+}
+/* ================================================================//FILTER BAR CATALOGUE - HET DOAN THEM VAO================================================================ */
