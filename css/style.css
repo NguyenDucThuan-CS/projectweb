@@ -125,7 +125,7 @@
 
 .intro .intro_right .intro_right_top .list_item ._item {
   padding-left: 20px;
-  padding-right: 20px;
+  
 }
 
 .intro .intro_right .intro_right_top .list_item ._item .content {
@@ -294,7 +294,8 @@
 
 ._gallery .list .item {
   width: 25%;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   height: 150px;
   position: relative;
 }
@@ -308,7 +309,9 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
   top: 0;
   left: 0;
   visibility: hidden;
@@ -397,41 +400,7 @@
   background-color: #bba94c;
 }
 
-.footer {
-  margin-top: 40px;
-  padding: 20px;
-}
-.footer .contain {
-  display: flex;
-  justify-content: space-around;
-  background-color: #fafaf7;
-  height: 100px;
-}
-.footer .footer_left {
-  width: 50%;
-}
-.footer .footer_right {
-  width: 50%;
-}
-.footer .footer_left {
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-}
-.footer .footer_left ._home {
-  font-size: 50px;
-  color: #8e847f;
-  margin-right: 20px;
-}
-.footer .footer_right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.footer .footer_right i {
-  margin-right: 10px;
-  font-size: 20px;
-}
+
 
 .about_title {
   padding: 20px;
@@ -479,7 +448,7 @@
 }
 
 .about_who_we_are .content .text {
-  width: 50%;
+  width: 75%;
 }
 
 .about_who_we_are .content .text h3 {
@@ -489,7 +458,7 @@
   margin-bottom: 20px;
 }
 .about_who_we_are .content ._list {
-  width: 25%;
+  width: 0%;
   padding-left: 15px;
 }
 
@@ -528,9 +497,10 @@
 }
 
 .testimonials ._contain ._list .item .title .content {
-  background-color: #efedeb;
+  background-color: #999693;
   padding: 20px;
   margin-bottom: 20px;
+  height: 180px;
 }
 
 .testimonials ._contain ._list .item .title a {
@@ -786,7 +756,169 @@
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 /* DEN HET CHO NAY */
+=======
+.blog_product {
+  padding: 20px;
+  height: 300px;
+}
+
+.blog_product ._contain {
+  display: flex;
+  height: 100%;
+}
+
+.blog_product ._contain .image {
+  width: 60%;
+  padding: 10px;
+  height: 100%;
+}
+
+.blog_product ._contain .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.blog_product ._contain .content {
+  width: 40%;
+  padding: 10px;
+}
+
+.blog_product ._contain .content .content_top {
+  margin-bottom: 10px;
+}
+.blog_product ._contain .content .content_top p {
+  margin-bottom: 10px;
+}
+.blog_product ._contain .content .content_top p span {
+  font-weight: bold;
+}
+.blog_product ._contain .content .content_top button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #87a33e;
+  cursor: pointer;
+}
+
+.blog_product ._contain .content .content_bottom p {
+  margin-bottom: 20px;
+}
+.blog_product ._contain .content hr {
+  margin-bottom: 10px;
+}
+
+.blog_gallery {
+  padding: 20px;
+  height: 600px;
+  background-color: white;
+}
+
+.blog_gallery h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.blog_gallery .list {
+  margin-top: 20px;
+  display: flex;
+}
+
+.blog_gallery .list .item {
+  width: 25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 150px;
+
+}
+
+.blog_gallery .list .item img {
+  width: 100%;
+  height: 100%;
+}
+
+.blog_gallery .list .item .info {
+  width: 100%;
+  height: 100%;
+  padding-right: 20px;
+ 
+
+}
+
+.blog_gallery .list .item .info h3 {
+  margin-top: 10px;
+}
+
+
+
+.blog_gallery .list .item .info ._btn {
+  margin-top: 20px;
+  text-align: center;
+}
+.blog_gallery .list .item .info ._btn button{
+  padding: 10px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border: none;
+}
+.blog_gallery .list .item .info p {
+  margin-top: 10px;
+}
+
+.blog_gallery .list .item .info .content {
+  width: 100%;
+  height: 100%;
+  background-color: #373630;
+  opacity: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog_gallery .list .item .info button a {
+  color: white;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+}
+.footer .contain {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fafaf7;
+  height: 100px;
+ 
+}
+.footer .footer_left {
+  width: 50%;
+}
+.footer .footer_right {
+  width: 50%;
+}
+.footer .footer_left {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.footer .footer_left ._home {
+  font-size: 50px;
+  color: #8e847f;
+  margin-right: 20px;
+}
+.footer .footer_right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer_right i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+>>>>>>> main
 
 /* ================================================================CHECKOUT PAGE================================================================ */
 
