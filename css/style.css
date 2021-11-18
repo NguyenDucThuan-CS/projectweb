@@ -659,7 +659,10 @@
   float: left;
   /* padding-right: 20px; */
   transition: 0.5s;
+  padding: 10px
 }
+
+
 
 .list_product ._contain .list_item .item:hover {
   transform: translate(0, -4px);
@@ -672,7 +675,7 @@
 
 .list_product ._contain .list_item .item .content {
   background-color: #fafaf7;
-  padding: 30px;
+  padding: 10px;
 }
 
 .list_product ._contain .list_item .item .content a {
@@ -682,7 +685,9 @@
 
 .detail_product {
   padding: 10px;
-  height: 500px;
+  width: 70%;
+  margin: auto;
+  height: 300px;
 }
 
 .detail_product ._contain {
