@@ -1,6 +1,8 @@
 <?php
   include_once('db/connect.php');
 ?>
+
+
 <?php
   $sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
   $sql_product = mysqli_query($con, 'SELECT * FROM tbl_product');
@@ -86,7 +88,7 @@
           <div class = "content" style = "height: 100px;padding:10px">
             <h3><?php echo $row_product['product_name']?></h3>
             <p style = "margin-top: 10px;margin-bottom: 10px;"><?php echo $row_product['product_price']."$"?></p>
-            <a href="detail_product.php?product_id = <?php echo $row_product['product_id']?>">More</a>
+            <a href="detail_product.php?product_id=<?php echo $row_product['product_id']?>">More</a>
           </div>
         </div>
       <?php

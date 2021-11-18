@@ -21,7 +21,7 @@
           <div class = "content" style = "height: 100px;padding:10px">
             <h3><?php echo $row_product_category['product_name']?></h3>
             <p style = "margin-top: 10px;margin-bottom: 10px;"><?php echo $row_product_category['product_price']."$"?></p>
-            <a href="detail_product.php?product_id = <?php echo $row_product_category['product_id']?>">More</a>
+            <a href="detail_product.php?product_id=<?php echo $row_product_category['product_id']?>">More</a>
           </div>
         </div>
       <?php

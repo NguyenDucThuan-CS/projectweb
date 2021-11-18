@@ -1,3 +1,15 @@
+<?php
+  include_once('db/connect.php');
+?>
+
+<?php
+  if(isset($_GET['product_id'])) {
+    $id = $_GET['product_id'];
+    $sql_product = mysqli_query($con, "SELECT * FROM tbl_product WHERE product_id = $id");
+    $product = mysqli_fetch_array($sql_product);
+  } 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,50 +41,38 @@
       <a href = "checkout.html"><i class="fas fa-shopping-cart"></i></a>
     </div>
   </header>
-
-
 <div class = "catalogue_title">
     <div class = "_contain">
         <div class = "symbol"><i class="fa fa-shopping-cart"></i></i></div>
         <h1>Product Detail</h1>
     </div>
 </div>
-
-<div class="detail_product">
+<div class="detail_product" style = "width:60%;height: 250px;margin:auto">
   <div class="_contain">
     <div class="image">
-      <img src = "img/product_1.jpg" id="img-large"/>
+      <img src = "img/<?php echo $product['product_image1']?>" id="img-large"/>
     </div>
     <div class="slider">
       <div class="sm-img-wrapper">
-        <a href="#" onclick="changeImg(1)"><img src="img/product_1.jpg" alt="Product detail"></a>
+        <a onclick = "changImg()"><img id = "image2" src="img/<?php echo $product['product_image2']?>" alt="Product detail"></a>
       </div>
       <div class="sm-img-wrapper">
-        <a href="#" onclick="changeImg(2)"><img src="img/product_2.jpg" alt="Product detail"></a>
+        <a onclick = "changImg()" ><img id = "image3" src="img/<?php echo $product['product_image3']?>" alt="Product detail"></a>
       </div>
       <div class="sm-img-wrapper">
-        <a href="#" onclick="changeImg(3)"><img src="img/product_3.jpg" alt="Product detail"></a>
+        <a onclick = "changImg()" ><img id = "image4" src="img/<?php echo $product['product_image4']?>" alt="Product detail"></a>
       </div>
     </div>
     <div class="content">
       <div class = "content_top">
-        <p><span>Product name:</span> Wooden bed</p>
-        <p><span>Dimmesion:</span> 200 x 140 x 50 (cm)</p>
-        <p><span>Price:</span> 2.990.000 VND</p>
+        <p><span>Product name:</span> <?php echo $product['product_name']?></p>
+        <p><span>Price:</span> <?php echo $product['product_price']."$"?></p>
         <button><a href = "checkout.html">Add to cart</a></button>
       </div>
-
-
       <hr />
       <div class = "content_bottom">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus fringilla hendrerit lectus nec vehicula.
-              Integer hendrerit orci id metus venenatis in luctus.</p>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In faucibus, risus eu volutpat pellentesque, massa felis feugiat velit, nec mattis felis elit a eros.           
-              Cras convallis sodales orci, et pretium sapien egestas quis. Donec tellus leo, scelerisque in facilisis a, laoreet vel quam. Suspendisse arcu nisl, tincidunt a vulputate ac, feugiat vitae leo.</p>
+          <p><?php echo $product['product_discrip']?></p>
       </div>
-
-   
-
     </div>
   </div>
 </div>
@@ -95,6 +95,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/product_detail.js"></script>
 </body>
 </html>
