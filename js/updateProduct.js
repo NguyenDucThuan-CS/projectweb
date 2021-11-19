@@ -1,9 +1,9 @@
-$("#filter").change(function(){
-    var x = $("#filter").val();
+$(".qt-minus").click(function(){
+    var x = $(".qt-minus");
     xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "xuliProduct.php?product_category="+x, false);
+    xmlhttp.open("GET", "capnhatgiohang.php?id="+x, false);
     xmlhttp.send(null);
-    $("#list_item").html(xmlhttp.responseText);
+  /*   $("#list_item").html(xmlhttp.responseText); */
 })
 
 

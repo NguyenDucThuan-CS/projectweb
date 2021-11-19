@@ -9,20 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header_left">
-          <a href="index.html"><img src="img/logo.png" /></a>
-        </div>
-        <div class="header_right">
-          <a href="index.html">HOME</a>
-          <a href="about.html">ABOUT US</a>
-          <a href="catalogue.html">CATALOGUE</a>
-          <a href="blog.html">BLOG</a>
-          <a href="contact.html">CONTACT</a>
-          <a href="login.html">LOGIN</a>
-          <a href = "checkout.html"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-      </header>
+<?php
+  include_once('header.php');
+  ?>
 
 <div class = "catalogue_title">
     <div class = "_contain">
@@ -88,23 +77,8 @@
     </div>
 </section> 
 
-<footer class="footer">
-    <div class="contain">
-      <div class="footer_left">
-        <i class="fa fa-home _home">
-        </i>
-        <div class = "_text">
-        <p>28 Jackson Blvd Ste 1020</p>
-        <p>Chicago</p>
-        <p>IL 60604-2340</p>
-        </div>
-      </div>
-      <div class="footer_right">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-google-plus-square"></i>
-      </div>
-    </div>
-  </footer>
+<?php
+  include_once('footer.php');
+  ?>
 </body>
 </html>

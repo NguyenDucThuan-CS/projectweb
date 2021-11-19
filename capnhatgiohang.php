@@ -16,6 +16,9 @@ if (mysqli_connect_errno()) {
      $sql_soluong_decr = mysqli_query($con, "SELECT * FROM tbl_cart WHERE product_id = $id");
      $soluong_decr = mysqli_fetch_array($sql_soluong_decr);
      $count_dcr =  $soluong_decr['product_amount'] - 1;
+     if($count_dcr == 0) {
+        mysqli_query($con, "DELETE FROM tbl_cart WHERE product_id = $id");
+     }
      mysqli_query($con, "UPDATE tbl_cart SET product_amount = $count_dcr WHERE product_id = $id");
      header('Location: checkout.php');
  }
@@ -26,6 +29,12 @@ if (mysqli_connect_errno()) {
     $soluong_decr = mysqli_fetch_array($sql_soluong_decr);
     $count_dcr =  $soluong_decr['product_amount'] + 1;
     mysqli_query($con, "UPDATE tbl_cart SET product_amount = $count_dcr WHERE product_id = $id");
+    header('Location: checkout.php');
+}
+
+if(isset($_GET['remove'])) {
+    $id = $_GET['remove'];
+    mysqli_query($con, "DELETE FROM tbl_cart WHERE product_id = $id");
     header('Location: checkout.php');
 }
 ?>
