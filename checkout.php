@@ -13,7 +13,8 @@
     $count = mysqli_num_rows($sql_select_giohang);
     if($count == 0) {
       mysqli_query($con, "INSERT INTO tbl_cart(product_name,product_id,product_image,product_discrip,product_price,product_amount) VALUES ('$tensanpham','$sanpham_id','$hinhanh','$motasanpham','$giasanpham','$soluong')");
-    }  
+    }
+  
     else {
       $row_select_cart = mysqli_fetch_array($sql_select_giohang);
       $soluong = $row_select_cart['product_amount'] + 1;
@@ -24,7 +25,8 @@
 
  <?php
   $sql_giohang = mysqli_query($con, "SELECT * FROM tbl_cart");
-
+  $row_effect = mysqli_num_rows($sql_giohang);
+  $sum = 0;
  ?>
 
 
@@ -67,7 +69,10 @@
       </header>
       <div class="container">
         <section id="cart"> 
-          <?php while($row_giohang = mysqli_fetch_array($sql_giohang)) {?>
+          <?php while($row_giohang = mysqli_fetch_array($sql_giohang)) {
+            $sum = $sum + $row_giohang['product_amount']*$row_giohang['product_price'];
+            ?>
+            
           <article class="product">
             <header>
               <a class="remove">
@@ -80,11 +85,11 @@
               <?php echo $row_giohang['product_discrip']?>
             </div>
             <footer class="content">
-              <span class="qt-minus">-</span>
+              <a href = "capnhatgiohang.php?id_decrease=<?php echo $row_giohang['product_id']?>"><span class="qt-minus">-</span></a>
               <span class="qt"><?php echo $row_giohang['product_amount']?></span>
-              <span class="qt-plus">+</span>
+              <a href = "capnhatgiohang.php?id_increase=<?php echo $row_giohang['product_id']?>"><span class="qt-plus">+</span></a>
               <h2 class="full-price">
-              <?php echo $row_giohang['product_price']."€"?>
+              <?php echo $row_giohang['product_price']*$row_giohang['product_amount']."€"?>
               </h2>
               <h2 class="price">
               <?php echo $row_giohang['product_price']."€"?>
@@ -99,12 +104,12 @@
       <footer id="site-footer">
         <div class="container clearfix">
           <div class="left">
-            <h2 class="subtotal">Subtotal: <span>163.96</span>€</h2>
-            <h3 class="tax">Taxes (5%): <span>8.2</span>€</h3>
-            <h3 class="shipping">Shipping: <span>9.99</span>€</h3>
+            <h2 class="subtotal">Subtotal: <span><?php echo $sum?></span>€</h2>
+            <h3 class="tax">Taxes (5%): <span> <?php echo $sum*5/100 ?></span>€</h3>
+            <h3 class="shipping">Shipping: <span><?php if($row_effect) echo "9.99€"; else echo "0"  ;?></span></h3>
           </div>
           <div class="right">
-            <h1 class="total">Total: <span>182.15</span>€</h1>
+            <h1 class="total">Total: <span><?php echo $sum*105/10 + 9.99 ?></span>€</h1>
             <a class="btn" id="checkout-btn">Checkout</a>
           </div>
     
@@ -198,6 +203,6 @@
     </section>
     <!-- //Payment Modal -->
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="js/checkout1.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="js/checkout2.js"></script>
   </body>
 </html>

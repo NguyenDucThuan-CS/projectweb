@@ -1,4 +1,4 @@
-/* 
+
  function changeVal(el) {
     var qt = parseFloat(el.parent().children(".qt").html());
     var price = parseFloat(el.parent().children(".price").html());
@@ -88,4 +88,3 @@
 
 
 
- */
