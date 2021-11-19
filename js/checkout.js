@@ -1,4 +1,4 @@
-function changeVal(el) {
+/* function changeVal(el) {
   var qt = parseFloat(el.parent().children(".qt").html());
   var price = parseFloat(el.parent().children(".price").html());
   var eq = Math.round(price * qt * 100) / 100;
@@ -82,4 +82,16 @@ document.getElementById('checkout-btn').addEventListener('click',function(){
 
 document.querySelector('.payment-modal .payment-modal-body .payment-modal-close').addEventListener('click',function(){
   document.querySelector('.payment-modal').style.display='none';
-});
+}); */
+
+function changeAmount(valid) {
+  if(valid) {
+    var soluong = parseInt(document.getElementById("amount").innerHTML);
+    document.getElementById("amount") = soluong + 1;
+  }
+
+  else {
+    var soluong = parseInt(document.getElementById("amount").innerHTML);
+    document.getElementById("amount") = soluong - 1;
+  }
+}

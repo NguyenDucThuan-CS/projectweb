@@ -1,3 +1,33 @@
+<?php
+  include_once('db/connect.php');
+?>
+ <?php
+  if(isset($_POST['themgiohang'])) {
+    $tensanpham = $_POST['tensanpham'];
+    $sanpham_id = $_POST['sanpham_id'];
+    $motasanpham = $_POST['motasanpham'];
+    $giasanpham = $_POST['giasanpham'];
+    $hinhanh = $_POST['hinhanh'];
+    $soluong = $_POST['soluong'];
+    $sql_select_giohang = mysqli_query($con, "SELECT * FROM tbl_cart WHERE product_id = $sanpham_id");
+    $count = mysqli_num_rows($sql_select_giohang);
+    if($count == 0) {
+      mysqli_query($con, "INSERT INTO tbl_cart(product_name,product_id,product_image,product_discrip,product_price,product_amount) VALUES ('$tensanpham','$sanpham_id','$hinhanh','$motasanpham','$giasanpham','$soluong')");
+    }  
+    else {
+      $row_select_cart = mysqli_fetch_array($sql_select_giohang);
+      $soluong = $row_select_cart['product_amount'] + 1;
+      mysqli_query($con, "UPDATE tbl_cart SET product_amount =  $soluong WHERE product_id =  $sanpham_id");
+    }   
+  } 
+ ?>
+
+ <?php
+  $sql_giohang = mysqli_query($con, "SELECT * FROM tbl_cart");
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,117 +67,42 @@
       </header>
       <div class="container">
         <section id="cart"> 
+          <?php while($row_giohang = mysqli_fetch_array($sql_giohang)) {?>
           <article class="product">
             <header>
               <a class="remove">
-                <img src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/1.jpg" alt="">
-    
+                <img src="img/<?php echo $row_giohang['product_image']?>" alt="">
                 <h3>Remove product</h3>
               </a>
             </header>
-    
             <div class="content">
-    
-              <h1>Lorem ipsum</h1>
-    
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad omnis provident laborum dolore in atque.
-    
+              <h1><?php echo $row_giohang['product_name']?></h1>
+              <?php echo $row_giohang['product_discrip']?>
             </div>
-    
             <footer class="content">
               <span class="qt-minus">-</span>
-              <span class="qt">2</span>
+              <span class="qt"><?php echo $row_giohang['product_amount']?></span>
               <span class="qt-plus">+</span>
-    
               <h2 class="full-price">
-                29.98€
+              <?php echo $row_giohang['product_price']."€"?>
               </h2>
-    
               <h2 class="price">
-                14.99€
+              <?php echo $row_giohang['product_price']."€"?>
               </h2>
             </footer>
           </article>
-    
-          <article class="product">
-            <header>
-              <a class="remove">
-                <img src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/3.jpg" alt="">
-    
-                <h3>Remove product</h3>
-              </a>
-            </header>
-    
-            <div class="content">
-    
-              <h1>Lorem ipsum dolor</h1>
-    
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad omnis provident laborum dolore in atque.
-    
-            </div>
-    
-            <footer class="content">
-              
-              <span class="qt-minus">-</span>
-              <span class="qt">1</span>
-              <span class="qt-plus">+</span>
-    
-              <h2 class="full-price">
-                79.99€
-              </h2>
-    
-              <h2 class="price">
-                79.99€
-              </h2>
-            </footer>
-          </article>
-    
-          <article class="product">
-            <header>
-              <a class="remove">
-                <img src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/5.jpg" alt="">
-    
-                <h3>Remove product</h3>
-              </a>
-            </header>
-    
-            <div class="content">
-    
-              <h1>Lorem ipsum dolor ipsdu</h1>
-    
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad omnis provident laborum dolore in atque.
-    
-            </div>
-    
-            <footer class="content">
-              
-              <span class="qt-minus">-</span>
-              <span class="qt">3</span>
-              <span class="qt-plus">+</span>
-    
-              <h2 class="full-price">
-                53.99€
-              </h2>
-    
-              <h2 class="price">
-                17.99€
-              </h2>
-            </footer>
-          </article>
-    
+            <?php
+          }
+            ?>
         </section>
-    
       </div>
-    
       <footer id="site-footer">
         <div class="container clearfix">
-    
           <div class="left">
             <h2 class="subtotal">Subtotal: <span>163.96</span>€</h2>
             <h3 class="tax">Taxes (5%): <span>8.2</span>€</h3>
             <h3 class="shipping">Shipping: <span>9.99</span>€</h3>
           </div>
-    
           <div class="right">
             <h1 class="total">Total: <span>182.15</span>€</h1>
             <a class="btn" id="checkout-btn">Checkout</a>
@@ -243,6 +198,6 @@
     </section>
     <!-- //Payment Modal -->
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="js/checkout.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="js/checkout1.js"></script>
   </body>
 </html>

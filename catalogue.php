@@ -80,7 +80,9 @@
     <div class = "_contain">
       <hr />
       <div class = "list_item" id = "list_item">
-      <?php while($row_product = mysqli_fetch_array($sql_product)) {?>
+      <?php 
+      while($row_product = mysqli_fetch_array($sql_product)) {
+      ?>
         <div class = "item" style = "padding:10px">
           <div class = "image" style = "height: 200px;">
             <img src = "./img/<?php echo $row_product['product_image1']?>" style = "height:100%"/>

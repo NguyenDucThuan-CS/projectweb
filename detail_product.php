@@ -54,20 +54,29 @@
     </div>
     <div class="slider">
       <div class="sm-img-wrapper">
-        <a onclick = "changImg()"><img id = "image2" src="img/<?php echo $product['product_image2']?>" alt="Product detail"></a>
+        <a onclick = "changImg('image2')"><img id = "image2" src="img/<?php echo $product['product_image2']?>" alt="Product detail"></a>
       </div>
       <div class="sm-img-wrapper">
-        <a onclick = "changImg()" ><img id = "image3" src="img/<?php echo $product['product_image3']?>" alt="Product detail"></a>
+        <a onclick = "changImg('image3')" ><img id = "image3" src="img/<?php echo $product['product_image3']?>" alt="Product detail"></a>
       </div>
       <div class="sm-img-wrapper">
-        <a onclick = "changImg()" ><img id = "image4" src="img/<?php echo $product['product_image4']?>" alt="Product detail"></a>
+        <a onclick = "changImg('image4')" ><img id = "image4" src="img/<?php echo $product['product_image4']?>" alt="Product detail"></a>
       </div>
     </div>
     <div class="content">
       <div class = "content_top">
         <p><span>Product name:</span> <?php echo $product['product_name']?></p>
         <p><span>Price:</span> <?php echo $product['product_price']."$"?></p>
-        <button><a href = "checkout.html">Add to cart</a></button>
+        <form action = "checkout.php" method = "POST">
+          <input type = "hidden" name = "tensanpham" value = "<?php echo $product['product_name'] ?>"/>
+          <input type = "hidden" name = "sanpham_id" value = "<?php echo $product['product_id'] ?>"/>
+          <input type = "hidden" name = "motasanpham" value = "<?php echo $product['product_discrip'] ?>"/>
+          <input type = "hidden" name = "giasanpham" value = "<?php echo $product['product_price'] ?>"/>
+          <input type = "hidden" name = "hinhanh" value = "<?php echo $product['product_image1'] ?>"/>
+          <input type = "hidden" name = "soluong" value = "1"/>
+          <input type = "submit" name = "themgiohang" value = "Add to cart" style = "padding: 5px;background-color:green;border-radius: 2px"/>
+        </form>
+        
       </div>
       <hr />
       <div class = "content_bottom">
@@ -96,6 +105,6 @@
     </div>
   </footer>
 
-  <script src="js/product_detail.js"></script>
+  <script src="js/product_detail1.js"></script>
 </body>
 </html>
