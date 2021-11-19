@@ -44,21 +44,9 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'> 
   </head>
   <body>
-    <header class="header">
-      <div class="header_left">
-        <a href="index.html"><img src="img/logo.png" /></a>
-      </div>
-      <div class="header_right">
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT US</a>
-        <a href="catalogue.html">CATALOGUE</a>
-        <a href="blog.html">BLOG</a>
-        <a href="contact.html">CONTACT</a>
-        <a href="login.html">LOGIN</a>
-        <a href = "checkout.html"><i class="fas fa-shopping-cart"></i></a>
-      </div>
-    </header>
-
+  <?php
+  include_once('header.php');
+  ?>
     
     <!-- Checkout Section -->
     <section class="checkout">
@@ -77,7 +65,7 @@
             <header>
               <a class="remove">
                 <img src="img/<?php echo $row_giohang['product_image']?>" alt="">
-                <h3>Remove product</h3>
+                <a href = "capnhatgiohang.php?remove=<?php echo $row_giohang['product_id']?>"><h3>Remove product</h3></a>
               </a>
             </header>
             <div class="content">
@@ -122,25 +110,9 @@
   
     <section class="contact"></section>
 
-    <footer class="footer">
-      <div class="contain">
-        <div class="footer_left">
-          
-          <i class="fa fa-home _home">
-          </i>
-          <div class = "_text">
-          <p>28 Jackson Blvd Ste 1020</p>
-          <p>Chicago</p>
-          <p>IL 60604-2340</p>
-          </div>
-        </div>
-        <div class="footer_right">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-google-plus-square"></i>
-        </div>
-      </div>
-    </footer>
+    <?php
+  include_once('footer.php');
+  ?>
 
     <!-- Payment Modal -->
     <section class="payment-modal">
@@ -148,54 +120,35 @@
       <div class="payment-modal-body">
         <div id="Checkout" class="inline">
             <div class="payment-modal-close">+</div>
-            <h1>Pay Invoice</h1>
-            <div class="card-row">
-                <span class="visa"></span>
-                <span class="mastercard"></span>
-                <span class="amex"></span>
-                <span class="discover"></span>
-            </div>
-            <form>
+            <h1>Information</h1>
+           
+            <form action = "customer.php" method = "POST">
                 <div class="form-group">
                     <label for="PaymentAmount">Payment amount</label>
                     <div class="amount-placeholder">
-                        <span class="total">182.15</span>
+                        <span class="total"><?php echo $sum*105/10 + 9.99 ?></span>
                         <span>€</span>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label or="NameOnCard">Name on card</label>
-                    <input id="NameOnCard" class="form-control" type="text" maxlength="255"></input>
+                    <label or="name">Name</label>
+                    <input name="name" class="form-control" type="text" maxlength="255" required></input>
                 </div>
                 <div class="form-group">
-                    <label for="CreditCardNumber">Card number</label>
-                    <input id="CreditCardNumber" class="null card-image form-control" type="text"></input>
+                    <label for="phone">Phone number</label>
+                    <input name="phone" class="null card-image form-control" type="text" required></input>
                 </div>
-                <div class="expiry-date-group form-group">
-                    <label for="ExpiryDate">Expiry date</label>
-                    <input id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7"></input>
+                <div class=" form-group">
+                    <label for="address">Address</label>
+                    <input name="address" class="form-control" type="text" placeholder="" required></input>
                 </div>
-                <div class="security-code-group form-group">
-                    <label for="SecurityCode">Security code</label>
-                    <div class="input-container" >
-                        <input id="SecurityCode" class="form-control" type="text" ></input>
-                        <i id="cvc" class="fa fa-question-circle"></i>
-                    </div>
-                    <div class="cvc-preview-container two-card hide">
-                        <div class="amex-cvc-preview"></div>
-                        <div class="visa-mc-dis-cvc-preview"></div>
-                    </div>
+                <div class=" form-group">
+                    <label for="email">Email</label>
+                    <input name="email" class="form-control" type="text" placeholder=""  required></input>
                 </div>
-                <div class="zip-code-group form-group">
-                    <label for="ZIPCode">ZIP/Postal code</label>
-                    <div class="input-container">
-                        <input id="ZIPCode" class="form-control" type="text" maxlength="10"></input>
-                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Enter the ZIP/Postal code for your credit card billing address."><i class="fa fa-question-circle"></i></a>
-                    </div>
-                </div>
-                <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+                <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit" name = "themkhachhang">
                     <span class="submit-button-lock"></span>
-                    <span class="align-middle">Pay €<span class="total">182.15</span></span>
+                    <span class="align-middle">CONFIRM</span>
                 </button>
             </form>
         </div>
@@ -204,5 +157,6 @@
     <!-- //Payment Modal -->
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="js/checkout2.js"></script>
+    <script  src="js/updateProduct.js"></script>
   </body>
 </html>
