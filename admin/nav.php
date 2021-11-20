@@ -5,7 +5,7 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">Đơn hàng</a>
+      <a class="nav-link" href="xulidonhang.php">Đơn hàng</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="xulidanhmuc.php?themdanhmuc">Category</a>
