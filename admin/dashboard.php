@@ -29,7 +29,7 @@
 </head>
 <body>
 <p>Admin here</p>
-<a href = "?login=dangxuat">Đăng xuất</a>
+<a href = "dashboard.php?login=dangxuat">Đăng xuất</a>
 <?php
  include_once('nav.php');
 ?>
