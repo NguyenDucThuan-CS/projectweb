@@ -109,7 +109,7 @@
             <div class="info">
               <div class="content">
                 <div class="title_1">
-                  <a href="detail_product.html">Click here</a>
+                  <a href="catalogue.php">Click here</a>
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@
             <div class="info">
               <div class="content">
                 <div class="title_1">
-                  <a href="detail_product.html">Click here</a>
+                  <a href="catalogue.php">Click here</a>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@
             <div class="info">
               <div class="content">
                 <div class="title_1">
-                  <a href="detail_product.html">Click here</a>
+                  <a href="catalogue.php">Click here</a>
                 </div>
               </div>
             </div>
@@ -140,7 +140,7 @@
             <div class="info">
               <div class="content">
                 <div class="title_1">
-                  <a href="detail_product.html">Click here</a>
+                  <a href="catalogue.php">Click here</a>
                 </div>
               </div>
             </div>
@@ -163,7 +163,7 @@
               <p>
                 Walmart is a one-stop shop for all things home, so it's no surprise they have an extensive collection of furniture and decor to purchase. You'll find plenty of covetable furniture, but you'll also love their smaller household essential items like flatware, barware, bath linens, and small giftable items. 
               </p>
-              <a href="#"><button><a href = "about.html">More</a></button></a>
+              <a href="#"><button><a href = "about.php">More</a></button></a>
             </div>
           </div>
 
@@ -176,7 +176,7 @@
               <p>
                 What could we say about IKEA that you don't already know?If you're not sure where to start, their site allows you to browse by product category or room—from there, you can filter by price, material, size, and more to find the perfect piece.
               </p>
-              <a href="#"><button><a href = "about.html">More</a></button></a>
+              <a href="#"><button><a href = "about.php">More</a></button></a>
             </div>
           </div>
         </div>
