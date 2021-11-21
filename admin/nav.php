@@ -16,7 +16,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="#">Customer</a>
+      <a class="nav-link" href="xulikhachhang.php">Customer</a>
     </li>
 
 

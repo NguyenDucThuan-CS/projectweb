@@ -1,6 +1,25 @@
 <?php
   include_once('db/connect.php');
 ?>
+<?php
+    session_start();
+?>
+
+
+
+<?php
+ if(!isset($_SESSION['dangnhap'])){
+     header('Location: login.php');
+ } 
+?>
+
+<?php 
+    if(isset($_GET['logout'])){
+            unset($_SESSION['dangnhap']);
+            header('Location: index.php');
+        
+    }
+?>
  <?php
   if(isset($_POST['themgiohang'])) {
     $tensanpham = $_POST['tensanpham'];
@@ -47,7 +66,7 @@
   <?php
   include_once('header.php');
   ?>
-    
+    <a href = "?logout">Log out</a>
     <!-- Checkout Section -->
     <section class="checkout">
       <header id="site-header">

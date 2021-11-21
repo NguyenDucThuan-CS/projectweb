@@ -1,4 +1,15 @@
 <?php
+    session_start();
+?>
+
+<?php
+ if(!isset($_SESSION['dangnhap'])){
+     header('Location: index.php');
+ } 
+?>
+
+
+<?php
 $con = mysqli_connect("localhost:3307","root","","donoithat");
 
 // Check connection
